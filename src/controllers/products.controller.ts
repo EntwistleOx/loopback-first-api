@@ -120,7 +120,7 @@ export class ProductsController {
     },
   })
   async findById(
-    @param.path.number('id') id: string,
+    @param.path.string('id') id: string,
     @param.query.object('filter', getFilterSchemaFor(Products)) filter?: Filter<Products>
   ): Promise<Products> {
     return this.productsRepository.findById(id, filter);
@@ -134,7 +134,7 @@ export class ProductsController {
     },
   })
   async updateById(
-    @param.path.number('id') id: string,
+    @param.path.string('id') id: string,
     @requestBody({
       content: {
         'application/json': {
@@ -155,7 +155,7 @@ export class ProductsController {
     },
   })
   async replaceById(
-    @param.path.number('id') id: string,
+    @param.path.string('id') id: string,
     @requestBody() products: Products,
   ): Promise<void> {
     await this.productsRepository.replaceById(id, products);
@@ -168,7 +168,7 @@ export class ProductsController {
       },
     },
   })
-  async deleteById(@param.path.number('id') id: string): Promise<void> {
+  async deleteById(@param.path.string('id') id: string): Promise<void> {
     await this.productsRepository.deleteById(id);
   }
 }
