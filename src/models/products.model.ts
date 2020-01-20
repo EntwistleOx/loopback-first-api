@@ -25,7 +25,7 @@ export class Products extends Entity {
     id: true,
     generated: true,
   })
-  id?: number;
+  id?: string;
 
 
   constructor(data?: Partial<Products>) {
