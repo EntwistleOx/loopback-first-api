@@ -1,4 +1,27 @@
-# loopback-first-api
+# Loopback firsat API
 
-[![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
-# loopback-first-api
+First close up to Loopback, trying with a simple products API.
+
+Create controller:
+
+```
+$| lb4 controller
+```
+
+Crerate datasource:
+
+```
+$| lb4 datasource
+```
+
+Create model:
+
+```
+$| lb4 model
+```
+
+Create repository:
+
+``` 
+$| lb4 repository
+```
